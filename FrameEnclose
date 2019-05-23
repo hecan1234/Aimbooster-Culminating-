@@ -1,0 +1,45 @@
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+
+
+
+public class FrameEnclose extends JFrame{
+	
+	static MainMenu menu;
+	static JTextField textfield1, textfield2, textfield3;
+	
+	public FrameEnclose(String a){
+		super(a);
+		Container c = getContentPane();
+		menu = new MainMenu();
+		c.add(menu);
+		menu.setBounds(200,200,200,200);    
+        menu.setBackground(Color.gray);  
+        JButton b1=new JButton("Instructions");     
+        b1.setBounds(50,100,80,30);    
+        b1.setBackground(Color.yellow);  
+        JButton b2=new JButton("Start");   
+        b2.setBounds(100,100,80,30);    
+        b2.setBackground(Color.yellow);  
+        menu.add(b1); menu.add(b2);  
+        c.add(menu);  
+                c.setSize(400,400);    
+                c.setLayout(null);    
+                c.setVisible(true);   
+                
+                c.setLayout(new FlowLayout());
+    		    textfield1 = new JTextField("Text field 1",10);
+    		    textfield2 = new JTextField("Text field 2",10);
+    		    textfield3 = new JTextField("Text field 3",10);
+    		    c.add(textfield1);
+    		    c.add(textfield2);
+    		    c.add(textfield3);
+    		   
+    		    
+    		    c.setVisible(true);
+
+	}
+	
+	
+}
