@@ -1,0 +1,32 @@
+import java.awt.Font;
+import java.awt.Frame;
+import java.awt.TextField;
+import java.awt.event.*;
+import javax.swing.*;
+
+class PopUpMenu {
+
+    public static void main(String[] args) {
+
+        Runnable r = new Runnable() {
+        	
+            public void run() {
+            	final TextField t1; 
+                final JButton b = new JButton("Click me");
+
+                final JPopupMenu menu = new JPopupMenu("Menu");
+                menu.add("Click");
+                menu.add("The");
+                menu.add("Head");
+                b.addActionListener( new ActionListener() {
+                    public void actionPerformed(ActionEvent ae) {
+                        menu.show(b, b.getWidth()/2, b.getHeight()/2);
+                        
+                    }
+                } );
+                JOptionPane.showMessageDialog(null,b);
+            }
+        };
+        SwingUtilities.invokeLater(r);
+    }
+}
