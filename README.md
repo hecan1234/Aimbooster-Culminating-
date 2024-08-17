@@ -1,0 +1,1 @@
+Sending Hate from Canada
